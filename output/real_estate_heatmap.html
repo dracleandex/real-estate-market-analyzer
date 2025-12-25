@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8141e1916a2a92f6c802bf97d674e415 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8141e1916a2a92f6c802bf97d674e415" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8141e1916a2a92f6c802bf97d674e415 = L.map(
+                "map_8141e1916a2a92f6c802bf97d674e415",
+                {
+                    center: [31.044915033333332, -96.88295250000002],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_926e6ed942295bcd8452c243a464ccac = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_926e6ed942295bcd8452c243a464ccac.addTo(map_8141e1916a2a92f6c802bf97d674e415);
+        
+    
+            var heat_map_7dc9c4748c08679606d5a8b6f1cd9d45 = L.heatLayer(
+                [[32.7903221, -96.7704719, 669000.0], [30.2836052, -97.739286, 602000.0], [32.8211592, -96.8260709, 1017000.0], [29.7304123, -95.4824827, 717000.0], [32.7906734, -96.7684434, 519000.0], [30.4354987, -97.7568643, 917000.0], [30.006622, -95.1083996, 927000.0], [30.3502663, -97.7440422, 936000.0], [30.1956761, -97.7505115, 658000.0]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 15,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_7dc9c4748c08679606d5a8b6f1cd9d45.addTo(map_8141e1916a2a92f6c802bf97d674e415);
+        
+    
+            var marker_cluster_237b81b51b22b678e0bb7450bd65edd5 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_45da832dd6e388803cde72267334376c = L.marker(
+                [32.7903221, -96.7704719],
+                {
+}
+            ).addTo(marker_cluster_237b81b51b22b678e0bb7450bd65edd5);
+        
+    
+            var icon_0fc60d3f435b1a35c386563744a61ea2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f7e57e145689cf3041031f18ed5528cb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d42e9a70c8662a58385e913d013dbd91 = $(`<div id="html_d42e9a70c8662a58385e913d013dbd91" style="width: 100.0%; height: 100.0%;">             <b>4896 Elm St</b><br>             Price: $669,000<br>             Beds: 4<br>             City: Dallas             </div>`)[0];
+                popup_f7e57e145689cf3041031f18ed5528cb.setContent(html_d42e9a70c8662a58385e913d013dbd91);
+            
+        
+
+        marker_45da832dd6e388803cde72267334376c.bindPopup(popup_f7e57e145689cf3041031f18ed5528cb)
+        ;
+
+        
+    
+    
+            marker_45da832dd6e388803cde72267334376c.bindTooltip(
+                `<div>
+                     $669k
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_45da832dd6e388803cde72267334376c.setIcon(icon_0fc60d3f435b1a35c386563744a61ea2);
+            
+    
+            var marker_10c6eb045be756f73ae3aa1cb5f992e9 = L.marker(
+                [30.2836052, -97.739286],
+                {
+}
+            ).addTo(marker_cluster_237b81b51b22b678e0bb7450bd65edd5);
+        
+    
+            var icon_9abc81316d488aa2bf1a6f0dec8d4689 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f1eea9361273796083df1f5710825f2b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_83142fda89b0091d834ae5275896a259 = $(`<div id="html_83142fda89b0091d834ae5275896a259" style="width: 100.0%; height: 100.0%;">             <b>5390 Elm St</b><br>             Price: $602,000<br>             Beds: 4<br>             City: Austin             </div>`)[0];
+                popup_f1eea9361273796083df1f5710825f2b.setContent(html_83142fda89b0091d834ae5275896a259);
+            
+        
+
+        marker_10c6eb045be756f73ae3aa1cb5f992e9.bindPopup(popup_f1eea9361273796083df1f5710825f2b)
+        ;
+
+        
+    
+    
+            marker_10c6eb045be756f73ae3aa1cb5f992e9.bindTooltip(
+                `<div>
+                     $602k
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_10c6eb045be756f73ae3aa1cb5f992e9.setIcon(icon_9abc81316d488aa2bf1a6f0dec8d4689);
+            
+    
+            var marker_90930e0051cd659185f94db0d0c7164d = L.marker(
+                [32.8211592, -96.8260709],
+                {
+}
+            ).addTo(marker_cluster_237b81b51b22b678e0bb7450bd65edd5);
+        
+    
+            var icon_38ccbdd3b6fbef95e085f55a2f7a095f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d8c347f35c8f5b88dd40f177eb5cb07f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9ce1feb4df870734889fa8f6a707ad5e = $(`<div id="html_9ce1feb4df870734889fa8f6a707ad5e" style="width: 100.0%; height: 100.0%;">             <b>5206 Maple Blvd</b><br>             Price: $1,017,000<br>             Beds: 4<br>             City: Dallas             </div>`)[0];
+                popup_d8c347f35c8f5b88dd40f177eb5cb07f.setContent(html_9ce1feb4df870734889fa8f6a707ad5e);
+            
+        
+
+        marker_90930e0051cd659185f94db0d0c7164d.bindPopup(popup_d8c347f35c8f5b88dd40f177eb5cb07f)
+        ;
+
+        
+    
+    
+            marker_90930e0051cd659185f94db0d0c7164d.bindTooltip(
+                `<div>
+                     $1017k
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_90930e0051cd659185f94db0d0c7164d.setIcon(icon_38ccbdd3b6fbef95e085f55a2f7a095f);
+            
+    
+            var marker_49ffb3260bc5e73e5d9e5462ab8e59e5 = L.marker(
+                [29.7304123, -95.4824827],
+                {
+}
+            ).addTo(marker_cluster_237b81b51b22b678e0bb7450bd65edd5);
+        
+    
+            var icon_efaf44cdd535c395c357d2831fd0845a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9b21a1a323d37410488aefde011dde76 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6c888067c9b76ca8403291a2b45a9bfb = $(`<div id="html_6c888067c9b76ca8403291a2b45a9bfb" style="width: 100.0%; height: 100.0%;">             <b>9000 Hill Ct</b><br>             Price: $717,000<br>             Beds: 4<br>             City: Houston             </div>`)[0];
+                popup_9b21a1a323d37410488aefde011dde76.setContent(html_6c888067c9b76ca8403291a2b45a9bfb);
+            
+        
+
+        marker_49ffb3260bc5e73e5d9e5462ab8e59e5.bindPopup(popup_9b21a1a323d37410488aefde011dde76)
+        ;
+
+        
+    
+    
+            marker_49ffb3260bc5e73e5d9e5462ab8e59e5.bindTooltip(
+                `<div>
+                     $717k
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_49ffb3260bc5e73e5d9e5462ab8e59e5.setIcon(icon_efaf44cdd535c395c357d2831fd0845a);
+            
+    
+            var marker_560bc77d7d10119d28eb1525d80bc146 = L.marker(
+                [32.7906734, -96.7684434],
+                {
+}
+            ).addTo(marker_cluster_237b81b51b22b678e0bb7450bd65edd5);
+        
+    
+            var icon_f07b2908de9c8f285f1e70ac59c91314 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bddee8ab39fd9d9381ab483462c10d74 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_db2fd4f8b4e6ae3c95797570ba63f059 = $(`<div id="html_db2fd4f8b4e6ae3c95797570ba63f059" style="width: 100.0%; height: 100.0%;">             <b>4382 Main St</b><br>             Price: $519,000<br>             Beds: 5<br>             City: Dallas             </div>`)[0];
+                popup_bddee8ab39fd9d9381ab483462c10d74.setContent(html_db2fd4f8b4e6ae3c95797570ba63f059);
+            
+        
+
+        marker_560bc77d7d10119d28eb1525d80bc146.bindPopup(popup_bddee8ab39fd9d9381ab483462c10d74)
+        ;
+
+        
+    
+    
+            marker_560bc77d7d10119d28eb1525d80bc146.bindTooltip(
+                `<div>
+                     $519k
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_560bc77d7d10119d28eb1525d80bc146.setIcon(icon_f07b2908de9c8f285f1e70ac59c91314);
+            
+    
+            var marker_6c302b389de33ec4ed939b1a8e4e7615 = L.marker(
+                [30.4354987, -97.7568643],
+                {
+}
+            ).addTo(marker_cluster_237b81b51b22b678e0bb7450bd65edd5);
+        
+    
+            var icon_30b7b76c8f5f5c8816cd6511a24a6928 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bf339bc6d4db1365b34f3156112ea6ed = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c4d31b58c45ddbf3367bfa441263b938 = $(`<div id="html_c4d31b58c45ddbf3367bfa441263b938" style="width: 100.0%; height: 100.0%;">             <b>1671 Oak Dr</b><br>             Price: $917,000<br>             Beds: 2<br>             City: Austin             </div>`)[0];
+                popup_bf339bc6d4db1365b34f3156112ea6ed.setContent(html_c4d31b58c45ddbf3367bfa441263b938);
+            
+        
+
+        marker_6c302b389de33ec4ed939b1a8e4e7615.bindPopup(popup_bf339bc6d4db1365b34f3156112ea6ed)
+        ;
+
+        
+    
+    
+            marker_6c302b389de33ec4ed939b1a8e4e7615.bindTooltip(
+                `<div>
+                     $917k
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6c302b389de33ec4ed939b1a8e4e7615.setIcon(icon_30b7b76c8f5f5c8816cd6511a24a6928);
+            
+    
+            var marker_780b268a8bbb592cab90f0cbd981b71b = L.marker(
+                [30.006622, -95.1083996],
+                {
+}
+            ).addTo(marker_cluster_237b81b51b22b678e0bb7450bd65edd5);
+        
+    
+            var icon_de2459c662c4a8620028ec46864dc7e0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_abb98079b3d4638773849c62030fd577 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bdd21aceb7495fb041830ed8b751cae7 = $(`<div id="html_bdd21aceb7495fb041830ed8b751cae7" style="width: 100.0%; height: 100.0%;">             <b>9605 Elm Dr</b><br>             Price: $927,000<br>             Beds: 4<br>             City: Houston             </div>`)[0];
+                popup_abb98079b3d4638773849c62030fd577.setContent(html_bdd21aceb7495fb041830ed8b751cae7);
+            
+        
+
+        marker_780b268a8bbb592cab90f0cbd981b71b.bindPopup(popup_abb98079b3d4638773849c62030fd577)
+        ;
+
+        
+    
+    
+            marker_780b268a8bbb592cab90f0cbd981b71b.bindTooltip(
+                `<div>
+                     $927k
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_780b268a8bbb592cab90f0cbd981b71b.setIcon(icon_de2459c662c4a8620028ec46864dc7e0);
+            
+    
+            var marker_dba7727de689c03f3dd438aeb9e54416 = L.marker(
+                [30.3502663, -97.7440422],
+                {
+}
+            ).addTo(marker_cluster_237b81b51b22b678e0bb7450bd65edd5);
+        
+    
+            var icon_e3d33ecf9deec2015e09dd71c7f8d0eb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f54f71a07abfc1e53ee8823ba5779e41 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_10db8258363add157550e0dfd4ed16ba = $(`<div id="html_10db8258363add157550e0dfd4ed16ba" style="width: 100.0%; height: 100.0%;">             <b>5295 Hill Ct</b><br>             Price: $936,000<br>             Beds: 5<br>             City: Austin             </div>`)[0];
+                popup_f54f71a07abfc1e53ee8823ba5779e41.setContent(html_10db8258363add157550e0dfd4ed16ba);
+            
+        
+
+        marker_dba7727de689c03f3dd438aeb9e54416.bindPopup(popup_f54f71a07abfc1e53ee8823ba5779e41)
+        ;
+
+        
+    
+    
+            marker_dba7727de689c03f3dd438aeb9e54416.bindTooltip(
+                `<div>
+                     $936k
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dba7727de689c03f3dd438aeb9e54416.setIcon(icon_e3d33ecf9deec2015e09dd71c7f8d0eb);
+            
+    
+            var marker_59ac2341715f56b818d191fb1b862f43 = L.marker(
+                [30.1956761, -97.7505115],
+                {
+}
+            ).addTo(marker_cluster_237b81b51b22b678e0bb7450bd65edd5);
+        
+    
+            var icon_a478969da4282d9091284a4e4862d4f5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01ecc2cecd37a8299fe02e528a65466a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9b3fe061d1c6c43357b6e1a14525b2a2 = $(`<div id="html_9b3fe061d1c6c43357b6e1a14525b2a2" style="width: 100.0%; height: 100.0%;">             <b>6652 Maple Ct</b><br>             Price: $658,000<br>             Beds: 5<br>             City: Austin             </div>`)[0];
+                popup_01ecc2cecd37a8299fe02e528a65466a.setContent(html_9b3fe061d1c6c43357b6e1a14525b2a2);
+            
+        
+
+        marker_59ac2341715f56b818d191fb1b862f43.bindPopup(popup_01ecc2cecd37a8299fe02e528a65466a)
+        ;
+
+        
+    
+    
+            marker_59ac2341715f56b818d191fb1b862f43.bindTooltip(
+                `<div>
+                     $658k
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_59ac2341715f56b818d191fb1b862f43.setIcon(icon_a478969da4282d9091284a4e4862d4f5);
+            
+    
+            marker_cluster_237b81b51b22b678e0bb7450bd65edd5.addTo(map_8141e1916a2a92f6c802bf97d674e415);
+        
+</script>
+</html>

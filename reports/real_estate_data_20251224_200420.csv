@@ -1,0 +1,68 @@
+id,address,city,state,zip_code,price,bedrooms,bathrooms,square_feet,property_type,listing_status,source_site,url,latitude,longitude,scraped_at,updated_at
+1,4896 Elm St,Dallas,TX,75201,669000.0,4.0,4.0,2266.0,house,active,zillow,https://zillow.com/homedetails/4896-Elm-St,32.7903221,-96.7704719,2025-12-25 02:21:09.654961,2025-12-25 02:21:12.812536
+2,5390 Elm St,Austin,TX,78701,602000.0,4.0,2.5,1211.0,house,active,zillow,https://zillow.com/homedetails/5390-Elm-St,30.2836052,-97.739286,2025-12-25 02:21:09.663567,2025-12-25 02:21:14.461131
+3,5206 Maple Blvd,Dallas,TX,75201,1017000.0,4.0,2.0,4157.0,house,active,zillow,https://zillow.com/homedetails/5206-Maple-Blvd,32.8211592,-96.8260709,2025-12-25 02:21:09.663631,2025-12-25 02:21:16.186849
+4,9000 Hill Ct,Houston,TX,77002,717000.0,4.0,1.0,2667.0,house,active,zillow,https://zillow.com/homedetails/9000-Hill-Ct,29.7304123,-95.4824827,2025-12-25 02:21:09.663674,2025-12-25 02:21:18.652127
+5,4382 Main St,Dallas,TX,75201,519000.0,5.0,3.5,1213.0,house,active,zillow,https://zillow.com/homedetails/4382-Main-St,32.7906734,-96.7684434,2025-12-25 02:21:09.663713,2025-12-25 02:21:20.738667
+6,1671 Oak Dr,Austin,TX,78701,917000.0,2.0,3.0,3335.0,house,active,zillow,https://zillow.com/homedetails/1671-Oak-Dr,30.4354987,-97.7568643,2025-12-25 02:21:09.663756,2025-12-25 02:21:22.602989
+7,450 Washington Blvd,Dallas,TX,75201,894000.0,2.0,1.5,3805.0,house,active,zillow,https://zillow.com/homedetails/450-Washington-Blvd,,,2025-12-25 02:21:09.663791,2025-12-25 02:21:25.284529
+8,8946 Washington Ct,Austin,TX,78701,650000.0,3.0,1.0,1661.0,house,active,zillow,https://zillow.com/homedetails/8946-Washington-Ct,,,2025-12-25 02:21:09.663827,2025-12-25 02:21:26.843377
+9,6495 Elm Ave,Houston,TX,77002,785000.0,5.0,3.0,3269.0,house,active,zillow,https://zillow.com/homedetails/6495-Elm-Ave,,,2025-12-25 02:21:09.663860,2025-12-25 02:21:28.981405
+10,8991 Cedar Ave,San Antonio,TX,78205,649000.0,2.0,3.0,2745.0,house,active,zillow,https://zillow.com/homedetails/8991-Cedar-Ave,,,2025-12-25 02:21:09.663895,2025-12-25 02:21:30.812963
+11,9605 Elm Dr,Houston,TX,77002,927000.0,4.0,3.5,4016.0,house,active,zillow,https://zillow.com/homedetails/9605-Elm-Dr,30.006622,-95.1083996,2025-12-25 02:21:09.663931,2025-12-25 02:21:33.570752
+12,5295 Hill Ct,Austin,TX,78701,936000.0,5.0,2.0,3078.0,house,active,zillow,https://zillow.com/homedetails/5295-Hill-Ct,30.3502663,-97.7440422,2025-12-25 02:21:09.663971,2025-12-25 02:21:35.343245
+13,6652 Maple Ct,Austin,TX,78701,658000.0,5.0,2.5,1225.0,house,active,zillow,https://zillow.com/homedetails/6652-Maple-Ct,30.1956761,-97.7505115,2025-12-25 02:21:09.664009,2025-12-25 02:21:37.038498
+14,4910 Pine Ave,Houston,TX,77002,455000.0,4.0,3.0,1348.0,house,active,zillow,https://zillow.com/homedetails/4910-Pine-Ave,,,2025-12-25 02:21:09.664044,2025-12-25 02:21:39.580589
+15,5436 Pine Ln,Dallas,TX,75201,983000.0,3.0,2.0,4193.0,house,active,zillow,https://zillow.com/homedetails/5436-Pine-Ln,32.8693493,-96.7289406,2025-12-25 02:32:25.592960,2025-12-25 02:32:39.972826
+16,297 Maple Blvd,Houston,TX,77002,613000.0,5.0,1.0,2235.0,house,active,zillow,https://zillow.com/homedetails/297-Maple-Blvd,,,2025-12-25 02:32:25.601779,2025-12-25 02:32:41.904490
+17,1974 Elm St,San Antonio,TX,78205,677000.0,5.0,2.0,2445.0,house,active,zillow,https://zillow.com/homedetails/1974-Elm-St,29.4271653,-98.4820651,2025-12-25 02:32:25.601845,2025-12-25 02:32:44.422036
+18,3249 Main Dr,Houston,TX,77002,804000.0,3.0,4.0,3116.0,house,active,zillow,https://zillow.com/homedetails/3249-Main-Dr,29.6612833,-95.4383954,2025-12-25 02:32:25.601887,2025-12-25 02:32:47.510532
+19,9542 Pine Ct,Dallas,TX,75201,965000.0,4.0,4.0,4418.0,house,active,zillow,https://zillow.com/homedetails/9542-Pine-Ct,32.6601351,-96.773169,2025-12-25 02:32:25.601925,2025-12-25 02:32:49.268262
+20,2395 Lake Dr,Houston,TX,77002,926000.0,4.0,3.0,4429.0,house,active,zillow,https://zillow.com/homedetails/2395-Lake-Dr,30.054881,-95.1574843,2025-12-25 02:32:25.601963,2025-12-25 02:32:52.404301
+21,2601 Main Dr,San Antonio,TX,78205,872000.0,5.0,2.0,4038.0,house,active,zillow,https://zillow.com/homedetails/2601-Main-Dr,,,2025-12-25 02:32:25.602024,2025-12-25 02:32:56.143100
+22,6583 Hill Ave,Austin,TX,78701,801000.0,2.0,3.0,2194.0,house,active,zillow,https://zillow.com/homedetails/6583-Hill-Ave,,,2025-12-25 02:32:25.602060,2025-12-25 02:32:58.343493
+23,5130 Pine Blvd,Austin,TX,78701,863000.0,3.0,3.5,2536.0,house,active,zillow,https://zillow.com/homedetails/5130-Pine-Blvd,,,2025-12-25 02:32:25.602096,2025-12-25 02:33:01.241635
+24,1790 Cedar Ln,Houston,TX,77002,973000.0,5.0,4.5,4226.0,house,active,zillow,https://zillow.com/homedetails/1790-Cedar-Ln,29.7874804,-95.1068587,2025-12-25 02:32:25.602134,2025-12-25 02:33:03.260840
+25,626 Elm St,Austin,TX,78701,989000.0,4.0,4.0,3496.0,house,active,zillow,https://zillow.com/homedetails/626-Elm-St,29.8913665,-96.4894587,2025-12-25 02:32:25.602208,2025-12-25 02:33:05.186814
+26,4240 Elm Dr,Dallas,TX,75201,654000.0,5.0,3.5,1858.0,house,active,zillow,https://zillow.com/homedetails/4240-Elm-Dr,32.6947771,-96.9991535,2025-12-25 02:32:25.602245,2025-12-25 02:33:09.076769
+27,4178 Lake St,Dallas,TX,75201,956000.0,4.0,3.5,4324.0,house,active,zillow,https://zillow.com/homedetails/4178-Lake-St,32.6341153,-96.617456,2025-12-25 02:32:25.602281,2025-12-25 02:33:10.800034
+28,6238 Cooper St,Fort Worth,TX,76698,272056.0,2.0,3.0,3176.0,Townhouse,,Redfin,http://redfin.com/listing/16695,32.8495075,-97.402299,2025-12-25 02:33:11.327564,2025-12-25 02:33:12.792943
+29,3099 Cooper St,Fort Worth,TX,76836,283973.0,3.0,2.0,2537.0,Townhouse,,Redfin,http://redfin.com/listing/93750,32.7365123,-97.343079,2025-12-25 02:33:11.327894,2025-12-25 02:33:14.619926
+30,9306 Abrams Rd,Dallas,TX,76860,537554.0,5.0,4.0,1852.0,Townhouse,,Redfin,http://redfin.com/listing/99652,32.9045676,-96.7380488,2025-12-25 02:33:11.328076,2025-12-25 02:33:16.119865
+31,2553 Cooper St,Arlington,TX,76637,600081.0,5.0,2.0,2729.0,Townhouse,,Redfin,http://redfin.com/listing/99751,32.778725,-97.1140745,2025-12-25 02:33:11.328227,2025-12-25 02:33:18.241003
+32,9452 Abrams Rd,Arlington,TX,76690,431618.0,4.0,4.0,2080.0,Townhouse,,Redfin,http://redfin.com/listing/78583,,,2025-12-25 02:33:11.328417,2025-12-25 02:33:19.617840
+33,6879 Lamar Blvd,Austin,TX,78125,669548.0,3.0,3.0,3199.0,Single Family,,Realtor.com,http://realtor.com/realestateandhomes-detail/84650,30.3363917,-97.7196338,2025-12-25 02:33:20.141460,2025-12-25 02:33:21.971541
+34,5786 Lamar Blvd,Georgetown,TX,78437,597662.0,6.0,3.0,4222.0,Single Family,,Realtor.com,http://realtor.com/realestateandhomes-detail/97636,,,2025-12-25 02:33:20.141607,2025-12-25 02:33:23.382027
+35,2596 6th St,Austin,TX,78578,1186572.0,4.0,2.0,3353.0,Single Family,,Realtor.com,http://realtor.com/realestateandhomes-detail/70455,30.2587752,-97.7139334,2025-12-25 02:33:20.141666,2025-12-25 02:33:25.582238
+36,4540 Burnet Rd,Georgetown,TX,78631,1040892.0,4.0,2.0,3976.0,Single Family,,Realtor.com,http://realtor.com/realestateandhomes-detail/12799,,,2025-12-25 02:33:20.141713,2025-12-25 02:33:27.033876
+37,8984 Burnet Rd,Austin,TX,78277,597137.0,6.0,3.0,4868.0,Single Family,,Realtor.com,http://realtor.com/realestateandhomes-detail/50436,30.3725649,-97.7263531,2025-12-25 02:33:20.141756,2025-12-25 02:33:28.797923
+38,7479 Abrams Rd,Arlington,TX,76179,439441.0,3.0,3.0,2411.0,Townhouse,,Redfin,http://redfin.com/listing/95521,,,2025-12-25 02:45:52.652339,2025-12-25 02:45:55.082729
+39,9035 Abrams Rd,Dallas,TX,76237,599055.0,4.0,2.0,1773.0,Townhouse,,Redfin,http://redfin.com/listing/29463,32.9009679,-96.7382954,2025-12-25 02:45:52.659073,2025-12-25 02:45:56.827498
+40,9590 Abrams Rd,Fort Worth,TX,76944,605009.0,4.0,1.0,2000.0,Townhouse,,Redfin,http://redfin.com/listing/79516,32.9005604,-97.3380334,2025-12-25 02:45:52.659130,2025-12-25 02:45:58.565109
+41,7061 Division St,Dallas,TX,76995,475025.0,4.0,2.0,2669.0,Townhouse,,Redfin,http://redfin.com/listing/76968,32.7449837,-96.8908492,2025-12-25 02:45:52.659176,2025-12-25 02:46:00.074176
+42,2397 Cooper St,Fort Worth,TX,76667,372020.0,4.0,1.0,3444.0,Townhouse,,Redfin,http://redfin.com/listing/95564,32.7365123,-97.3430807,2025-12-25 02:45:52.659218,2025-12-25 02:46:02.095468
+43,999 History Lane,Test City,,,450000.0,3.0,2.0,2000.0,,,,http://test-history.com/house1,,,2025-12-25 02:51:07.150701,2025-12-25 02:51:07.186654
+44,1234 Main Street,DuplicateCity,,,100000.0,,,,,,,http://test.com/1,,,2025-12-25 02:56:22.467596,2025-12-25 02:56:22.467606
+45,9142 Lake Dr,San Antonio,TX,78205,893000.0,3.0,4.0,4311.0,house,active,zillow,https://zillow.com/homedetails/9142-Lake-Dr,29.5364295,-98.434071,2025-12-25 02:56:42.817391,2025-12-25 02:56:45.702695
+46,6199 Lake Blvd,Dallas,TX,75201,828000.0,5.0,2.5,3363.0,house,active,zillow,https://zillow.com/homedetails/6199-Lake-Blvd,32.9814457,-96.7606365,2025-12-25 02:56:42.827317,2025-12-25 02:56:47.821014
+47,2356 Oak Blvd,Austin,TX,78701,607000.0,2.0,1.5,1352.0,house,active,zillow,https://zillow.com/homedetails/2356-Oak-Blvd,30.2371874,-97.8478138,2025-12-25 02:56:42.827378,2025-12-25 02:56:49.627291
+48,9557 Elm Dr,Dallas,TX,75201,926000.0,2.0,3.5,3852.0,house,active,zillow,https://zillow.com/homedetails/9557-Elm-Dr,32.6947771,-96.9991535,2025-12-25 02:56:42.827420,2025-12-25 02:56:51.040971
+49,1396 Maple Ln,Houston,TX,77002,612000.0,2.0,1.5,2019.0,house,active,zillow,https://zillow.com/homedetails/1396-Maple-Ln,29.5804049,-95.1179543,2025-12-25 02:56:42.827457,2025-12-25 02:56:52.954312
+50,1344 Maple Ct,Austin,TX,78701,714000.0,5.0,1.0,1492.0,house,active,zillow,https://zillow.com/homedetails/1344-Maple-Ct,30.1956761,-97.7505115,2025-12-25 02:56:42.827500,2025-12-25 02:56:54.399681
+51,6057 Cedar Ln,Houston,TX,77002,614000.0,2.0,1.0,2142.0,house,active,zillow,https://zillow.com/homedetails/6057-Cedar-Ln,29.7874804,-95.1068587,2025-12-25 02:56:42.827535,2025-12-25 02:56:56.286067
+52,7557 Elm Ln,Dallas,TX,75201,862000.0,2.0,1.0,3418.0,house,active,zillow,https://zillow.com/homedetails/7557-Elm-Ln,32.6380253,-96.9112549,2025-12-25 02:56:42.827575,2025-12-25 02:56:57.745550
+53,1313 Lake Ct,Houston,TX,77002,949000.0,5.0,3.5,4125.0,house,active,zillow,https://zillow.com/homedetails/1313-Lake-Ct,29.7499566,-95.638385,2025-12-25 02:56:42.827609,2025-12-25 02:57:01.576487
+54,5224 Maple Ave,Houston,TX,77002,731000.0,2.0,1.5,2641.0,house,active,zillow,https://zillow.com/homedetails/5224-Maple-Ave,,,2025-12-25 02:56:42.827643,2025-12-25 02:57:03.496276
+55,2322 Elm Blvd,Houston,TX,77002,587000.0,3.0,4.0,1765.0,house,active,zillow,https://zillow.com/homedetails/2322-Elm-Blvd,,,2025-12-25 02:56:42.827676,2025-12-25 02:57:05.568638
+56,6913 Washington Ave,Dallas,TX,75201,611000.0,2.0,2.5,1844.0,house,active,zillow,https://zillow.com/homedetails/6913-Washington-Ave,32.7870087,-96.7734918,2025-12-25 02:56:42.827710,2025-12-25 02:57:07.453338
+57,2882 Elm Blvd,Austin,TX,78701,871000.0,5.0,4.5,2699.0,house,active,zillow,https://zillow.com/homedetails/2882-Elm-Blvd,,,2025-12-25 02:56:42.827744,2025-12-25 02:57:09.245456
+58,451 Maple Ln,Dallas,TX,75201,920000.0,2.0,4.5,3838.0,house,active,zillow,https://zillow.com/homedetails/451-Maple-Ln,32.6069533,-96.8372681,2025-12-25 02:56:42.827778,2025-12-25 02:57:10.675580
+59,7492 Main St,Arlington,TX,76820,462924.0,2.0,3.0,1223.0,Townhouse,,Redfin,http://redfin.com/listing/55692,32.7371185,-97.1076655,2025-12-25 02:57:11.186059,2025-12-25 02:57:13.326847
+60,2909 Abrams Rd,Arlington,TX,76103,611542.0,5.0,1.0,2483.0,Townhouse,,Redfin,http://redfin.com/listing/77840,,,2025-12-25 02:57:11.186185,2025-12-25 02:57:14.705129
+61,7016 Cooper St,Arlington,TX,76348,526639.0,2.0,1.0,3175.0,Townhouse,,Redfin,http://redfin.com/listing/79045,32.6326828,-97.1360478,2025-12-25 02:57:11.186249,2025-12-25 02:57:16.990402
+62,7278 Division St,Fort Worth,TX,76529,584942.0,4.0,4.0,1350.0,Townhouse,,Redfin,http://redfin.com/listing/90851,,,2025-12-25 02:57:11.186299,2025-12-25 02:57:18.827492
+63,6065 Division St,Fort Worth,TX,76997,356509.0,4.0,3.0,2003.0,Townhouse,,Redfin,http://redfin.com/listing/77698,,,2025-12-25 02:57:11.186358,2025-12-25 02:57:20.894141
+64,7608 6th St,Round Rock,TX,78801,1110737.0,3.0,5.0,4895.0,Single Family,,Realtor.com,http://realtor.com/realestateandhomes-detail/26814,,,2025-12-25 02:57:21.406113,2025-12-25 02:57:23.706386
+65,1669 6th St,Austin,TX,78230,758712.0,3.0,5.0,4162.0,Single Family,,Realtor.com,http://realtor.com/realestateandhomes-detail/54680,29.7945063,-96.0843886,2025-12-25 02:57:21.406458,2025-12-25 02:57:25.754058
+66,8914 Congress Ave,Round Rock,TX,78902,900357.0,6.0,5.0,2939.0,Single Family,,Realtor.com,http://realtor.com/realestateandhomes-detail/81863,,,2025-12-25 02:57:21.406789,2025-12-25 02:57:27.211290
+67,8067 6th St,Austin,TX,78731,1036671.0,3.0,3.0,3508.0,Single Family,,Realtor.com,http://realtor.com/realestateandhomes-detail/39467,29.7774295,-96.1588406,2025-12-25 02:57:21.407070,2025-12-25 02:57:29.363133

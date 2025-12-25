@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PropTech Commander v3.0 | Advanced Analytics</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/css/tabler.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        #map { height: 550px; width: 100%; border-radius: 8px; z-index: 1; }
+        .badge-deal { background: #d63384; color: white; padding: 5px 10px; }
+        .chart-container { min-height: 350px; padding: 20px; }
+        .nav-tabs .nav-link.active { border-bottom-color: #206bc4; color: #206bc4; font-weight: bold; }
+    </style>
+</head>
+<body class="layout-fluid">
+    <div class="page">
+        <header class="navbar navbar-expand-md navbar-dark d-print-none">
+            <div class="container-xl">
+                <h1 class="navbar-brand">🏢 PropTech Commander</h1>
+                <div class="navbar-nav flex-row order-md-last">
+                    <a href="/export/csv" class="btn btn-outline-white btn-sm me-2">📥 CSV</a>
+                    <a href="/export/pdf" class="btn btn-primary btn-sm">📄 PDF</a>
+                    <a href="/logout" class="nav-link ms-3">Logout</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row row-cards mb-4">
+                        <div class="col-md-4">
+                            <div class="card card-sm">
+                                <div class="card-body d-flex align-items-center">
+                                    <span class="bg-primary text-white avatar me-3">🏠</span>
+                                    <div><div class="font-weight-medium">{{ stats.total }} Listings</div><div class="text-secondary">Total Active</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-sm">
+                                <div class="card-body d-flex align-items-center">
+                                    <span class="bg-green text-white avatar me-3">💰</span>
+                                    <div><div class="font-weight-medium">{{ stats.avg_price }}</div><div class="text-secondary">Avg Market Price</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs" data-bs-toggle="tabs">
+                                <li class="nav-item"><a href="#tabs-map" class="nav-link active" data-bs-toggle="tab">🗺️ Map Explorer</a></li>
+                                <li class="nav-item"><a href="#tabs-deals" class="nav-link" data-bs-toggle="tab">💎 Deal Hunter</a></li>
+                                <li class="nav-item"><a href="#tabs-health" class="nav-link" data-bs-toggle="tab">🏥 Market Health</a></li>
+                                <li class="nav-item"><a href="#tabs-hoods" class="nav-link" data-bs-toggle="tab">🏘️ Neighborhoods</a></li>
+                                <li class="nav-item"><a href="#tabs-list" class="nav-link" data-bs-toggle="tab">📋 All Listings</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-body p-0">
+                            <div class="tab-content">
+                                <div class="tab-pane active show" id="tabs-map"><div id="map"></div></div>
+
+                                <div class="tab-pane p-3" id="tabs-deals">
+                                    <table class="table table-vcenter">
+                                        <thead><tr><th>Address</th><th>Price</th><th>Avg Market</th><th>Discount</th></tr></thead>
+                                        <tbody>
+                                            {% for d in deals %}
+                                            <tr>
+                                                <td><span class="badge badge-deal me-2">DEAL</span> {{ d.address }}</td>
+                                                <td class="text-success fw-bold">${{ "{:,.0f}".format(d.price | default(0)) }}</td>
+                                                <td>${{ "{:,.0f}".format(d.market_avg | default(0)) }}</td>
+                                                <td class="text-danger">{{ "{:.1f}".format((d.discount | default(0)) * 100) }}%</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="tab-pane p-4" id="tabs-health">
+                                    <div class="row">
+                                        <div class="col-lg-6"><canvas id="healthChart"></canvas></div>
+                                        <div class="col-lg-6"><canvas id="inventoryChart"></canvas></div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane p-3" id="tabs-hoods">
+                                    <table class="table table-vcenter">
+                                        <thead><tr><th>ZIP Code</th><th>Avg Price</th><th>Inventory</th></tr></thead>
+                                        <tbody>
+                                            {% for n in neighborhoods %}
+                                            <tr>
+                                                <td><strong>{{ n.zip_code }}</strong></td>
+                                                <td>${{ "{:,.0f}".format(n.avg_price | default(0)) }}</td>
+                                                <td>{{ n.listing_count }} Properties</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="tab-pane p-0" id="tabs-list">
+                                    <table class="table table-vcenter card-table">
+                                        <thead><tr><th>Address</th><th>City</th><th>Price</th></tr></thead>
+                                        <tbody>
+                                            {% for p in properties %}
+                                            <tr>
+                                                <td>{{ p.address }}</td>
+                                                <td>{{ p.city }}</td>
+                                                <td class="text-success fw-bold">${{ "{:,.0f}".format(p.price | default(0)) }}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const stats = {{ stats | tojson }};
+        const mapData = {{ map_points | tojson }};
+
+        if (mapData.length > 0) {
+            const map = L.map('map').setView([mapData[0].latitude, mapData[0].longitude], 11);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+            mapData.forEach(p => {
+                L.marker([p.latitude, p.longitude]).addTo(map).bindPopup(`<b>${p.address}</b><br>$${p.price.toLocaleString()}`);
+            });
+            document.querySelectorAll('a[data-bs-toggle="tab"]').forEach(tab => {
+                tab.addEventListener('shown.bs.tab', (e) => { if (e.target.getAttribute('href') === '#tabs-map') map.invalidateSize(); });
+            });
+        }
+
+        new Chart(document.getElementById('healthChart'), {
+            type: 'radar',
+            data: {
+                labels: Object.keys(stats.volatility),
+                datasets: [{ label: 'Volatility', data: Object.values(stats.volatility), backgroundColor: 'rgba(32, 107, 196, 0.2)', borderColor: '#206bc4' }]
+            }
+        });
+
+        new Chart(document.getElementById('inventoryChart'), {
+            type: 'polarArea',
+            data: {
+                labels: Object.keys(stats.inventory),
+                datasets: [{ data: Object.values(stats.inventory), backgroundColor: ['rgba(32, 107, 196, 0.7)', 'rgba(47, 179, 68, 0.7)', 'rgba(245, 159, 0, 0.7)'] }]
+            }
+        });
+    </script>
+</body>
+</html>
